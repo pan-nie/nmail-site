@@ -6,7 +6,7 @@ import Base from '../layouts/Base.astro'
 import { REPO_URL, fetchLatestRelease } from '../lib/releases'
 
 const BREW_CMD =
-  'brew tap nathanpenny520/nmail https://github.com/nathanpenny520/homebrew-nmail\nbrew trust nathanpenny520/nmail\nbrew install nathanpenny520/nmail/nmail'
+  'brew tap pan-nie/nmail https://github.com/pan-nie/homebrew-nmail\nbrew trust pan-nie/nmail\nbrew install pan-nie/nmail/nmail'
 
 // 最新版直链（/dl → R2 镜像桶，见 worker.ts；构建期取体积，取不到不阻塞出站）
 const latest = await fetchLatestRelease()

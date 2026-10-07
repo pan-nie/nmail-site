@@ -10,7 +10,7 @@ import { mkdtempSync, writeFileSync, readFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
-const REPO = 'nathanpenny520/Nmail'
+const REPO = 'pan-nie/Nmail'
 const BUCKET = 'nmail-dl'
 const FILES = ['nmail-windows-x64.exe', 'nmail-macos-arm64', 'nmail-linux-x64', 'nmail-macos-arm64.app.zip']
 

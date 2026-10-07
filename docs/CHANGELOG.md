@@ -49,7 +49,7 @@
 
 - `feat: 站点内容自动化`——deploy.yml 增加每日定时构建（兜底主仓 docs/Releases 变更）与 workflow_dispatch（供主仓 release.sh 发版后触发，1-2 分钟内同步）；wrangler 入 devDependencies（修 CI 里 wrangler-action 的 npx 无 TTY 取消）。
 - `fix: package-lock 两条损坏条目（rollup 嵌套可选依赖缺 version 字段）`——npm ci 全环境（本机 npm 11 / CI npm 10）秒败 `Invalid Version:` 的真正原因，此前误判为 Secrets 未配。
-- `fix: 下载页安装命令对齐主仓文档`——`uvx nmail` 修正为 `uvx --from nmail-app nmail`（PyPI 包名 nmail-app，`nmail` 已被无关项目占用，原命令会装错包）；弃用文档外的 pipx 写法；winget id 对齐 `nathanpenny520.Nmail`；复制按钮改用每渠道显式 `copy` 字段，不再把「二选一」命令用 `&&` 串成无效命令。
+- `fix: 下载页安装命令对齐主仓文档`——`uvx nmail` 修正为 `uvx --from nmail-app nmail`（PyPI 包名 nmail-app，`nmail` 已被无关项目占用，原命令会装错包）；弃用文档外的 pipx 写法；winget id 对齐 `pan-nie.Nmail`；复制按钮改用每渠道显式 `copy` 字段，不再把「二选一」命令用 `&&` 串成无效命令。
 - `fix: 更新日志/版本徽章 CI 限流退化`——releases.ts 支持 `GITHUB_TOKEN` 认证头；deploy.yml build 步骤注入 Actions 自动提供的 token（匿名配额 60 次/时在共享 IP 上必被耗尽 → 403 → changelog 空态、徽章退回 FALLBACK 0.2.0）。
 - `fix: 移动端导航溢出`——Base.astro 新增 720px 断点：header 改两行，导航单行横滑（纯 CSS，维持零客户端 JS）。
 - `chore: 页脚移除过期的「Cloudflare Pages 托管」字样`（2026-09-12 已迁 Workers）。

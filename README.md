@@ -36,7 +36,7 @@ npm run preview
 
 ## Deployment (Cloudflare Workers static assets)
 
-**Current state (2026-09-12)**: repo `github.com/nathanpenny520/nmail-site` (public). Live at **<https://nmail.whizzzest.com>** (custom domain — `wrangler.toml` declares `routes.custom_domain=true`, so deploy creates DNS + certificate automatically); fallback entry <https://nmail-site.nathanpenny.workers.dev> (note: workers.dev is often unreachable from mainland-China networks — the custom domain is the primary entry).
+**Current state (2026-09-12)**: repo `github.com/pan-nie/nmail-site` (public). Live at **<https://nmail.whizzzest.com>** (custom domain — `wrangler.toml` declares `routes.custom_domain=true`, so deploy creates DNS + certificate automatically); fallback entry <https://nmail-site.nathanpenny.workers.dev> (note: workers.dev is often unreachable from mainland-China networks — the custom domain is the primary entry).
 
 > Migrated from Pages to Workers on 2026-09-12: Cloudflare recommends Workers for new projects (Pages feature work is mostly frozen), and Workers lets you declare the custom domain in wrangler config so `wrangler deploy` is fully automatic — with Pages, domains can only be clicked into place in the Dashboard.
 

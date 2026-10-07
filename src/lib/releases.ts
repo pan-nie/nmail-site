@@ -1,8 +1,8 @@
 // GitHub Releases 拉取（构建期）：单一来源=仓库 Releases；离线/限流时回退本地常量，
 // 保证 `astro build` 任何环境都能出站（REDESIGN_PLAN §10.2）。
-const REPO_API = 'https://api.github.com/repos/nathanpenny520/Nmail/releases'
+const REPO_API = 'https://api.github.com/repos/pan-nie/Nmail/releases'
 export const FALLBACK_VERSION = '0.4.0'
-export const REPO_URL = 'https://github.com/nathanpenny520/Nmail'
+export const REPO_URL = 'https://github.com/pan-nie/Nmail'
 
 export interface Release {
   tag_name: string

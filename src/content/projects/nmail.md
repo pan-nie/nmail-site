@@ -3,7 +3,7 @@ name: Nmail
 description: AI 驱动的本地聚合邮箱客户端——多账号一个收件箱，AI 总管家分类/归档/拟稿（审批/自动双模式），跨会话记忆与每日摘要 + AI 摘要，数据全程留在本机（MIT）。
 status: active
 url: https://nmail.whizzzest.com
-repo: https://github.com/nathanpenny520/Nmail
+repo: https://github.com/pan-nie/Nmail
 order: 1
 ---
 

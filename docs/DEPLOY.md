@@ -33,7 +33,7 @@ npx wrangler deploy    # 静态资产 + /dl Worker + 域名按 wrangler.toml 自
 | 触发器 | 覆盖什么 |
 |---|---|
 | `push: main` | 本仓库改动（页面/样式/同步脚本） |
-| `workflow_dispatch` | 主仓发版联动：release.sh 末尾 `gh workflow run deploy.yml -R nathanpenny520/nmail-site`（本机 gh 登录态，零额外配置），发版后 1-2 分钟站点跟上 |
+| `workflow_dispatch` | 主仓发版联动：release.sh 末尾 `gh workflow run deploy.yml -R pan-nie/nmail-site`（本机 gh 登录态，零额外配置），发版后 1-2 分钟站点跟上 |
 | `schedule: 0 1 * * *` | 每日兜底：主仓 docs/ 的提交最迟 24h 上站（sync-docs 从 raw main 拉），Releases 同理。注意仓库 60 天无活动 GitHub 会自动停用 schedule |
 
 ### Secrets（一次性配置）
@@ -46,9 +46,9 @@ npx wrangler deploy    # 静态资产 + /dl Worker + 域名按 wrangler.toml 自
 - `CLOUDFLARE_R2_API_TOKEN`：**仅 R2 编辑权限**的独立 token（`sync-r2.mjs` 用，与 deploy token 分离做最小授权）
 
 ```bash
-gh secret set CLOUDFLARE_API_TOKEN -R nathanpenny520/nmail-site      # 粘贴 token
-gh secret set CLOUDFLARE_ACCOUNT_ID -R nathanpenny520/nmail-site
-gh secret set CLOUDFLARE_R2_API_TOKEN -R nathanpenny520/nmail-site   # R2 镜像同步用
+gh secret set CLOUDFLARE_API_TOKEN -R pan-nie/nmail-site      # 粘贴 token
+gh secret set CLOUDFLARE_ACCOUNT_ID -R pan-nie/nmail-site
+gh secret set CLOUDFLARE_R2_API_TOKEN -R pan-nie/nmail-site   # R2 镜像同步用
 ```
 
 构建期拉 GitHub Releases 用 **`GITHUB_TOKEN`**——Actions 自动注入，无需配置；

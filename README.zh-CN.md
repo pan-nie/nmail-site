@@ -40,7 +40,7 @@ npm run preview
 
 ## 部署（Cloudflare Workers 静态资产）
 
-**当前状态（2026-09-12）**：仓库 `github.com/nathanpenny520/nmail-site`（public）。
+**当前状态（2026-09-12）**：仓库 `github.com/pan-nie/nmail-site`（public）。
 线上 **<https://nmail.whizzzest.com>**（自定义域，`wrangler.toml` 声明 `routes.custom_domain=true`，
 部署时自动建 DNS+证书）；兜底入口 <https://nmail-site.nathanpenny.workers.dev>（注：workers.dev
 在大陆网络常不可直连，主入口用自定义域即可）。

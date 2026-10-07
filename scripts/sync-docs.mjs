@@ -16,7 +16,7 @@ import { fileURLToPath } from 'node:url'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const OUT = path.join(ROOT, 'src', 'content', 'docs')
-const RAW_BASE = 'https://raw.githubusercontent.com/nathanpenny520/Nmail/main/docs'
+const RAW_BASE = 'https://raw.githubusercontent.com/pan-nie/Nmail/main/docs'
 
 // 白名单：file=主仓 docs/ 下的文件名；slug=站内路由（/docs/<slug>）
 const MAP = [
@@ -34,8 +34,8 @@ const MAP = [
 const FILE_TO_SLUG = new Map(MAP.map((m) => [m.file, m.slug]))
 // 白名单外的仓库文件链接 → GitHub（如 INSTALL.md 引用 ../README.md）
 const EXTRA_LINKS = new Map([
-  ['README.md', 'https://github.com/nathanpenny520/Nmail/blob/main/README.md'],
-  ['README.zh-CN.md', 'https://github.com/nathanpenny520/Nmail/blob/main/README.zh-CN.md'],
+  ['README.md', 'https://github.com/pan-nie/Nmail/blob/main/README.md'],
+  ['README.zh-CN.md', 'https://github.com/pan-nie/Nmail/blob/main/README.zh-CN.md'],
 ])
 
 // 2026-09-12 起目录结构为 Nmail/nmail-site（官网）与 Nmail/Nmail（主仓）并列——首选 ../Nmail/docs；

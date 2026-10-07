@@ -17,7 +17,7 @@ interface Env {
 
 // 资产白名单：把 /dl 收紧为「三个固定资产名」，防止被当成任意文件代理
 const ASSET_NAMES = new Set(['nmail-windows-x64.exe', 'nmail-macos-arm64', 'nmail-linux-x64', 'nmail-macos-arm64.app.zip'])
-const GITHUB_LATEST = 'https://github.com/nathanpenny520/Nmail/releases/latest/download/'
+const GITHUB_LATEST = 'https://github.com/pan-nie/Nmail/releases/latest/download/'
 
 export default {
   async fetch(request, env): Promise<Response> {

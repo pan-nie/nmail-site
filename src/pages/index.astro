@@ -5,7 +5,7 @@ import { fetchLatestRelease, versionOf, FALLBACK_VERSION } from '../lib/releases
 
 const release = await fetchLatestRelease()
 const version = versionOf(release?.tag_name) || FALLBACK_VERSION
-const releaseUrl = release?.html_url ?? 'https://github.com/nathanpenny520/Nmail/releases'
+const releaseUrl = release?.html_url ?? 'https://github.com/pan-nie/Nmail/releases'
 
 // SoftwareApplication 结构化数据：争取搜索结果富摘要（应用名/平台/免费/开源）
 const schema = {
@@ -62,7 +62,7 @@ const features = [
     </p>
     <div class="cta">
       <a class="btn btn-primary" href="/download/">免费下载</a>
-      <a class="btn btn-ghost" href="https://github.com/nathanpenny520/Nmail" target="_blank" rel="noopener">GitHub 源码 ↗</a>
+      <a class="btn btn-ghost" href="https://github.com/pan-nie/Nmail" target="_blank" rel="noopener">GitHub 源码 ↗</a>
     </div>
   </section>
 
